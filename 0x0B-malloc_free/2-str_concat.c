@@ -3,34 +3,35 @@
 
 /**
  * str_concat - the function concanate two strings
- * @s1: first inputi
+ * @s1: first input
  *
  * @s2: second input
  * Return: concat of s1 and s2
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *concat;
-	int x, y;
+	char *conc;
+	int x = 0;
+	int y = 0;
+	int a;
 
 	if (s1 == NULL)
-		s1 = ''';
+		s1 = "";
 	if (s2 == NULL)
-		s2 = ''';
+		s2 = "";
 
-		x = y = 0;
-
-	while (s1[x] != '\0')
-	{
+	for (a = 0; s1[a] != '\0'; a++)
 		x++;
-	}
+	for (a = 0; s2[a] != '\0'; a++)
+		y++;
 
-	while (s2[y] != '\0')
-	{
-		concat[x] = s2[y];
-		x++, y++;
-	}
-	concat[x] = '\0';
-	return (concat);
+	conc = malloc(sizeof(char) * (x + y) + 1);
+
+	if (conc == NULL)
+		return (NULL);
+	for (a = 0; s1[a] != '\0'; a++)
+		conc[a] = s1[a];
+	for (a = 0; s2[a] != '\0'; a++)
+		conc[x + a] = s2[a];
+	return (conc);
 }
-
