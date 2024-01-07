@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - a function that prints multiples of 3
+ * Return: void
+ */
 int main(void)
 {
 	int sum;
