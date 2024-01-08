@@ -37,7 +37,7 @@ void print_to_98(int n)
 		{
 			printf("%d", a);
 			if (n != 98)
-				printf(", ");
+				printf(" ");
 		}
 		printf("\n");
 	}
