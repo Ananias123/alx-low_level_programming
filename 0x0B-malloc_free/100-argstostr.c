@@ -38,12 +38,13 @@ char *argstostr(int ac, char **av)
 			d++;
 			c++;
 		}
-		p[d] = '\0';
+		p[d] = '\n';
 
 		c = 0;
 		d++;
 		b++;
 	}
+
 	d++;
 	p[d] = '\0';
 	return (p);
